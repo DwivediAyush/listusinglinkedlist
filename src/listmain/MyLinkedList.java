@@ -64,7 +64,30 @@ public class MyLinkedList {
         System.out.print("null");
         System.out.println();
     }
+  public int printrecursive(Node temp)
+  {
+      if(temp.getNext()==null)
+      {
+          return temp.getData();
+      }
+      printrecursive(temp.getNext());
+      return temp.getData();
+  }
 
+    public void setHead(Node head) {
+        this.head = head;
+    }
+
+    public Node  reverse(Node temp) {
+        if(temp.getNext() == null)
+            return temp;
+        else {
+            Node  newhead = reverse(temp.getNext());
+            temp.getNext().setNext(temp)  ;
+            temp.setNext(null);
+            return newhead;
+        }
+    }
 
 
 }

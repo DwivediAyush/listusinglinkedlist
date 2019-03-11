@@ -27,14 +27,25 @@ public class LinkedListMain {
         list.insert(element);
 
 
-        list.display();
+      /*  list.display();
         list.delete();
         list.display();
         list.delete();
         list.display();
-
+*/
         System.out.println("display by recursion");
-        System.out.println(list.printData(list.getHead()));
+        //list.printrecursive(list.getHead());
+        MyLinkedList obj=new MyLinkedList();
+
+
+
+          //  obj.insert(list.printrecursive(list.getHead()));
+
+
+       obj.setHead(obj.reverse(list.getHead()));
+
+       obj.display();
+
 
     }
 }
